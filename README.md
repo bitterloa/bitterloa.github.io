@@ -1,2 +1,4 @@
-# bitterloa.github.io
-Personal website for kamal.tech, hosted on Github Pages
+# Kamal Hasan Hood
+### Chief Technology Officer
+
+20+ years experience developing business critical apps and SaaS solutions.
