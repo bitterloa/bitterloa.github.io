@@ -1,25 +1,40 @@
-# theme: minima
-# theme: jekyll-theme-minimal
-
 # ---------------------------------------------------------------
 # https://github.com/pages-themes/midnight
+# ---------------------------------------------------------------
 theme: jekyll-theme-midnight
 title: Kamal Hood
 description: Chief Technology Officer
 # show_downloads: false
-# ---------------------------------------------------------------
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# ---------------------------------------------------------------
+# jekyll-sitemap config
+# ---------------------------------------------------------------
+url: "https://kamal.tech" # the base hostname & protocol for your site
+
+# ---------------------------------------------------------------
+# Defaults
+# ---------------------------------------------------------------
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
   - scope:
       path: ""
     values:
       layout: "default"
+  # - scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     layout: "post"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  # Disabling auto-sitemap creation for now! I am manually making the sitemap for the time being
+  # - jekyll-sitemap
+
+timezone: America/Los_Angeles
+favicon: assets/images/favicon.ico
+
+# ---------------------------------------------------------------
+# ---------------------------------------------------------------
+# theme: minima
+# theme: jekyll-theme-minimal

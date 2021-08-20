@@ -2,4 +2,52 @@
 ---
 @import "{{ site.theme }}";
 
+@import "_mixins.scss";
+@import "_utils.scss";
 @import "overrides.scss";
+
+$grey-border: #ccc3;
+
+/*
+  We add Bulma CSS to the project via CDN. Below are some optional Bulma overrides
+*/
+html {
+  background-color: inherit; // use the theme's body bg color
+}
+
+.navbar-title-w {
+  border-bottom: 1px solid $grey-border;
+  padding: .75em 0;
+  // margin-bottom: 1em;
+
+  .navbar-header-text {
+    margin-left:  1em;
+    padding-left: 1em;
+    border-left:  1px solid $grey-border;
+  }
+
+  .navbar-avatar {
+    height:        7em;
+    width:         7em;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@include for-phone-only {
+  section #title h1 {
+    font-size: 2.5em;
+  }
+  .navbar-title-w .navbar-header-text {
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+  .navbar-title-w .navbar-avatar {
+    height: 8em;
+    width: 8em;
+    min-width: 8em;
+    min-height: 8em;
+  }
+}

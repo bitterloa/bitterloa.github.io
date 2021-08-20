@@ -1,0 +1,76 @@
+// --------------------
+// Mobile phones (0 - 599px)
+// --------------------
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+// --------------------
+// Tablet Portrait (600 - 899px)
+// --------------------
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 899px) { @content; }
+}
+// --------------------
+// Regular/Large Tablet Landscape (900 - 1366px)
+// --------------------
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1366px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1366px) { @content; }
+}
+// --------------------
+// Desktop / Widescreen (>= 1367px), big desktop (>= 1800px)
+// --------------------
+@mixin for-desktop-up {
+  @media (min-width: 1367px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+// --------------------
+// SMALL Tablet Landscape (1024px)
+// - extra helper since tablets come in large variety of widths
+// - use this if we want something to show on large+landscape, but not on small tablet+landscape
+// --------------------
+@mixin for-small-tablet-landscape-down {
+  @media (max-width: 1024px) { @content; }
+}
+
+/*
+
+  // --------------------
+  // Responsive Notes:
+  // --------------------
+
+  The widest tablet I could find is the iPad Pro 12" which is 1366px wide
+   -- so 1366px was chosen as the upper limit for a tablet in landscape
+
+  Below is Tamik's code for tablet size:
+    @media (min-width: 600px) and (max-width: 1024px){
+  And this is for mobile phone size:
+    @media (max-width: 600px)
+
+*/
+
+
+/*
+  Other mixins below
+*/
+@mixin avatar($width: 50px){
+  width: $width;
+  height: $width;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  border-radius: 50%;
+}

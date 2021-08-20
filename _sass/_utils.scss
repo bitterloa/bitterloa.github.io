@@ -1,0 +1,41 @@
+// ---------------------------------------------------------------------
+// Flexboxes
+// ---------------------------------------------------------------------
+.flex-between {
+  justify-content: space-between;
+}
+.flex-around {
+  justify-content: space-around;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-start, .flex-end, .flex-center, .flex-between, .flex-around {
+  display: flex;
+  align-items: center;
+  // override verticle alignment by adding these classes
+  &.top-align { align-items: flex-start; }
+  &.baseline-align { align-items: baseline; }
+  &.bottom-align { align-items: flex-end; }
+
+  // default margin/padding between divs inside flex
+  // we don't add margin to the last element
+  > :not(:last-child) { margin-right: 0.75em; }
+
+  &.no-margins {
+    div, span {
+      margin-right: 0;
+    }
+  }
+  // .flex-item:not(:last-child) { margin-right: 1em; }
+  // &.padded, &.with-padding {
+  //   > :not(:last-child) { margin-right: 0.75em; }
+  // }
+}
